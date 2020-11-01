@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/l629cgouirbi/public_html/speechpacer
+    - export DEPLOYPATH=/home/kygykwix41wn/public_html/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp -R contactform $DEPLOYPATH
     - /bin/cp -R css $DEPLOYPATH
