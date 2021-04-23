@@ -2,11 +2,10 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/kygykwix41wn/public_html/
-    - export DEPLOYPATH2=/home/kygykwix41wn/
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp -R contactform $DEPLOYPATH
     - /bin/cp -R css $DEPLOYPATH
     - /bin/cp -R img $DEPLOYPATH
     - /bin/cp -R js $DEPLOYPATH
     - /bin/cp -R lib $DEPLOYPATH
-    - /bin/cp -R stats_experiment $DEPLOYPATH2
+    - /bin/cp -R stats $DEPLOYPATH
