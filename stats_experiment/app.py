@@ -12,7 +12,3 @@ def index():
 @app.route('/bee')
 def bee():
     return 'Flask is nice'
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
