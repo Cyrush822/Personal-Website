@@ -3,8 +3,11 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/kygykwix41wn/public_html/
     - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp application.py $DEPLOYPATH
     - /bin/cp -R contactform $DEPLOYPATH
     - /bin/cp -R css $DEPLOYPATH
     - /bin/cp -R img $DEPLOYPATH
     - /bin/cp -R js $DEPLOYPATH
     - /bin/cp -R lib $DEPLOYPATH
+    - /bin/cp -R static $DEPLOYPATH
+    - /bin/cp -R templates $DEPLOYPATH
