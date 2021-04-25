@@ -7,7 +7,7 @@ import math
 from random import shuffle
 from random import seed
 from random import random
-from datetime import date
+import datetime
 
 
 app = Flask(__name__)
@@ -21,7 +21,7 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 db = SQL("sqlite:///stats_database.db")
-seed(date.today())
+seed(datetime.datetime.now())
 
 
 @app.route("/")
