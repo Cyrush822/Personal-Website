@@ -57,7 +57,7 @@ def start():
         session["email"] = email
         session["referral_index"] = referral_index
 
-        return redirect("/words")
+        return redirect("/stats/words")
 
 
 @app.route("/words", methods=["POST", "GET"])
