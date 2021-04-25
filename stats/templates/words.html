@@ -21,7 +21,7 @@ Repeat until you don't know any of the words below!</span>
 
 {% block subtitle %}
 <ul id="navigation" style="text-align: left; list-style-type: none; padding-top: 2rem">
-  <form action="/words" method="POST">
+  <form action="/stats/words" method="POST">
     <h6> I KNOW THE FOLLOWING WORDS: </h6>
   {% for word in words %}
     <div class="form-group">
@@ -29,7 +29,7 @@ Repeat until you don't know any of the words below!</span>
       <label for="{{ word }}" style="padding-left: 2rem">{{ word }}</label><br>
     </div>
   {% endfor %}
-    <button type="submit" id="submitButton" href="/start" class="btn btn-primary" style="margin-top: 2rem; {% if used %} display: none {% endif %}" disabled>Replace selected words</button>
+    <button type="submit" id="submitButton" href="/stats/start" class="btn btn-primary" style="margin-top: 2rem; {% if used %} display: none {% endif %}" disabled>Replace selected words</button>
     <script>
 
       $("input[type='checkbox']").change(function() {
