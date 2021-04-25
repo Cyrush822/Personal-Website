@@ -123,22 +123,22 @@ def experiment():
         session["treatment_1"] = "visual"
         session["treatment_2"] = "audio"
         return render_template("visual.html", word_pairs=first_treatment_pairs,
-                               link="testing")
+                               link="/stats/testing")
     else:
         session["treatment_1"] = "audio"
         session["treatment_2"] = "visual"
         return render_template("audio.html", word_pairs=first_treatment_pairs,
-                               link="testing")
+                               link="/stats/testing")
 
 
 @ app.route("/testing")
 def testing():
     if (session["second_done"]):
         shuffle(session["second_treatment_words"])
-        return render_template("testing.html", words=session["second_treatment_words"], link="/finish")
+        return render_template("testing.html", words=session["second_treatment_words"], link="/stats/finish")
     else:
         shuffle(session["first_treatment_words"])
-        return render_template("testing.html", words=session["first_treatment_words"], link="/experiment2")
+        return render_template("testing.html", words=session["first_treatment_words"], link="/stats/experiment2")
 
 
 @ app.route("/finish", methods=["POST", "GET"])
@@ -210,11 +210,11 @@ def experiment2():
     if (session["treatment_1"] == "audio"):
         session["treatment_1"] = "visual"
         return render_template("visual.html", word_pairs=second_treatment_pairs,
-                               link="testing")
+                               link="/stats/testing")
     else:
         session["treatment_1"] = "audio"
         return render_template("audio.html", word_pairs=second_treatment_pairs,
-                               link="testing")
+                               link="/stats/testing")
 
 
 if __name__ == "__main__":
